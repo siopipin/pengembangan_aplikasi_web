@@ -30,6 +30,14 @@ export default function App() {
   // Mendefinisikan state untuk menyimpan indeks konten yang aktif
   const [activeContentIndex, setActiveContentIndex] = useState(0);
 
+  function fungsicekIndex(index) {
+
+  }
+
+  function manipulasi(data) {
+
+  }
+
   // Mengembalikan JSX yang mendefinisikan struktur UI dari aplikasi
   return (
     <div>
@@ -48,12 +56,12 @@ export default function App() {
           {/*  Tombol untuk mengganti konten yang aktif. Ketika diklik, fungsi setActiveContentIndex dipanggil dengan indeks yang sesuai */}
           <button
             className={activeContentIndex === 0 ? "active" : ""}
-            onClick={() => setActiveContentIndex(0)}
+            onClick={() => fungsicekIndex(0)}
           >
             Why React?
           </button>
           <button
-            className={activeContentIndex === 1 ? "active" : ""}
+            className={activeContentIndex === 0 ? "active" : ""}
             onClick={() => setActiveContentIndex(1)}
           >
             Core Features
