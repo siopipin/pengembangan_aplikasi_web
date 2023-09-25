@@ -1,0 +1,12 @@
+#products .title-section {
+  text-align: center;
+  margin: 48px 0;
+  font-family: "Sofia", cursive;
+  font-size: 40px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 20px;
+}

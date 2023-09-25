@@ -1,0 +1,26 @@
+header {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(64, 62, 62, 0.24) 0px 3px 8px;
+  background-color: #fff;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.inner-header {
+  display: flex;
+  background-color: #fff;
+  max-width: 1366px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inner-header .logo {
+  font-size: 28px;
+  cursor: pointer;
+}
