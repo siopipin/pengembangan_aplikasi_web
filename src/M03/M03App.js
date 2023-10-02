@@ -2,16 +2,21 @@
 import React, { useState } from "react";
 import TodoList from "./TodoList";
 import TodoInput from "./TodoInput";
-import "./M03Style.css"
+import "./M03Style.css";
 
 // Mendefinisikan komponen M03App sebagai komponen berbasis fungsi
 const M03App = () => {
   // Menggunakan hook useState untuk mendefinisikan state `todos` dan fungsi `setTodos` untuk mengubah state tersebut
-  const [todos, setTodos] = useState(["Belajar React"]);
+  const [todos, setTodos] = useState([]);
 
   // Fungsi untuk menambahkan todo baru ke dalam daftar
   const addTodo = (todo) => {
-    setTodos([...todos, todo]);
+    const newTodo = {
+      text: todo,
+      isCompleted: false,
+    };
+
+    setTodos([...todos, newTodo]);
   };
 
   // Fungsi untuk menghapus todo berdasarkan indeksnya
@@ -32,7 +37,7 @@ const M03App = () => {
 
       {/* Komponen untuk menampilkan daftar todo.
            Daftar `todos` dan fungsi `removeTodo` diteruskan sebagai props agar dapat digunakan dalam komponen TodoList */}
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList todos={todos} removeTodo={removeTodo} setTodos={setTodos} />
     </div>
   );
 };
