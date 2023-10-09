@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(49, 49, 49);
+}
+
+.container {
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+  height: 680px;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 150px;
+  background-color: #fff;
+}
+
+.header {
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.header input {
+  width: 260px;
+  height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: none;
+  border: 1px solid rgb(126, 125, 125);
+  border-radius: 4px;
+}
+
+.contact-list {
+  padding: 12px 8.5px 17px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: content-box;
+}
+
+.title {
+  font-size: 20px;
+  padding-top: 24px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  width: fit-content;
+  color: rgb(127, 127, 127);
+}
+
+.contact {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.contact h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(39, 38, 38);
+}
+
+.contact h4 {
+  font-size: 16px;
+  color: rgb(88, 88, 88);
+  font-weight: normal;
+}
