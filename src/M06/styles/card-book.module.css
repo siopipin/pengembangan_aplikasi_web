@@ -1,0 +1,58 @@
+.cardBook {
+  display: flex;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  overflow: hidden;
+  padding: 8px;
+  border-radius: 8px;
+  align-items: center;
+  border-left: 1px solid #09a809;
+  border-bottom: 2px solid #09a809;
+  cursor: pointer;
+  height: 200px;
+}
+
+.imgContainer {
+  height: 180px;
+  width: 150px;
+  border-radius: 4px;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+.imgBook {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+}
+
+.title {
+  font-size: 20px;
+  color: #202020;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.category {
+  font-size: 16px;
+  color: #3b3b3b;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 12px;
+  color: #1c1c1c;
+}
+
+.stock {
+  font-size: 12px;
+  color: #3b3b3b;
+  font-weight: normal;
+}

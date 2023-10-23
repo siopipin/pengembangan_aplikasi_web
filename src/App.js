@@ -1,9 +1,7 @@
+import M06App from "./M06/M06App";
+
 function App() {
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
-  );
+  return <M06App />;
 }
 
 export default App;
