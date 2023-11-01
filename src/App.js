@@ -1,8 +1,8 @@
+import M07App from "./M07/M07App";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <M07App />
   );
 }
 
