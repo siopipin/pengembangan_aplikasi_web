@@ -1,7 +1,9 @@
+import HomeM13 from "./M13/pages/Home";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <HomeM13 />
     </div>
   );
 }
