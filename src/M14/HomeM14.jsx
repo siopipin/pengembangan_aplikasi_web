@@ -4,22 +4,18 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material";
-import { AppBarCustom } from "./components/AppBarCustom";
 import { BannerCustom } from "./components/BannerCustom";
 import { PricingPlan } from "./components/PricingPlan";
 import { Footer } from "./components/Footer";
 
 const defaultTheme = createTheme();
-function M07App() {
+function HomeM14() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles
         styles={{ ul: { margin: 0, padding: 0, listStyle: "none" } }}
       />
       <CssBaseline />
-
-      {/* Appbar */}
-      <AppBarCustom />
 
       {/* Banner/HeroUnit */}
       <BannerCustom />
@@ -33,4 +29,4 @@ function M07App() {
   );
 }
 
-export default M07App;
+export default HomeM14;

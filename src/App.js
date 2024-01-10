@@ -1,8 +1,16 @@
-import M07App from "./M07/M07App";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import RootRoutes from "./M14/routes/RootRoutes";
+import { AppBarCustom } from "./M14/components/AppBarCustom";
 
 function App() {
   return (
-    <M07App />
+    <BrowserRouter>
+      <AppBarCustom />
+      <main>
+        <RootRoutes />
+      </main>
+    </BrowserRouter>
   );
 }
 
