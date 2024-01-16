@@ -1,8 +1,23 @@
+import { BrowserRouter } from "react-router-dom";
+import { Container } from "@mui/material";
+import { AppBarCustom } from "./components/appbar";
+import { RootRoutes } from "./utils/RootRoutes";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <BrowserRouter>
+      <Container maxWidth="md">
+        <AppBarCustom />
+        <Container
+          sx={{
+            p: 4,
+            backgroundColor: "whitesmoke",
+          }}
+        >
+          <RootRoutes />
+        </Container>
+      </Container>
+    </BrowserRouter>
   );
 }
 
