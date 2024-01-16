@@ -1,7 +1,16 @@
+import { HomePage } from "./pages/HomePage";
+import { LoginPage } from "./pages/LoginPage";
+
 function App() {
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <div>
+        Navbar
+
+        <a href="/login">Login</a>
+      </div>
+      <HomePage />
+      <LoginPage />
     </div>
   );
 }
