@@ -7,7 +7,7 @@ import "./M03Style.css"
 // Mendefinisikan komponen M03App sebagai komponen berbasis fungsi
 const M03App = () => {
   // Menggunakan hook useState untuk mendefinisikan state `todos` dan fungsi `setTodos` untuk mengubah state tersebut
-  const [todos, setTodos] = useState(["Belajar React"]);
+  const [todos, setTodos] = useState(["Mengikut zoom meeting pekerti"]);
 
   // Fungsi untuk menambahkan todo baru ke dalam daftar
   const addTodo = (todo) => {
