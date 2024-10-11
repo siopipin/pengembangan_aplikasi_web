@@ -35,7 +35,7 @@ const M04App = () => {
           contact.nama.toLowerCase().includes(keyword.toLowerCase())
         ),
       ]);
-    }, 1000);
+    }, 5000);
     /**ketika inputan di ketik kurang dari 1 detik maka clean up akan dijalankan
      * sehingga kita tidak mengambil data setiap kali user mengetik
      * tetapi setiap user berhenti mengetik selama 1 detik
