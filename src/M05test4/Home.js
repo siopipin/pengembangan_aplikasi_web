@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 function Home() {
   const [nilai, setNilai] = useState("");
@@ -7,15 +7,13 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setNilai("Welcome to Home")
+      setLoading(false)
     }, 3000)
-    
+
   }, [])
 
-  return (
-    <div>
-       {isLoading ? <h1>Loading...</h1> : <h1>{nilai}</h1>}
-    </div>
-  )
+  
+  return <div>{isLoading ? <h1>Loading...</h1> : <h1>{nilai}</h1>}</div>;
 }
 
-export default Home
+export default Home;
