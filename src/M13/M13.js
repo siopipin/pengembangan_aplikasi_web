@@ -17,6 +17,8 @@ export const M13 = () => {
       console.log(response.status);
       console.log(response.data.dataUsers);
       console.log(response.data.dataUsers[0]);
+      console.log(response.data.dataUsers[0].name);
+      
       
     } catch (error) {
       console.log(error);
