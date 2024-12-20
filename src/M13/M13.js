@@ -2,9 +2,6 @@ import axios from "axios";
 import { useEffect } from "react";
 
 export const M13 = () => {
-  // axios get data dari local
-  // url= https://8c04-103-165-239-161.ngrok-free.app
-
   const ambilDataServer = async () => {
     try {
       const response = await axios.get(
@@ -19,6 +16,8 @@ export const M13 = () => {
       console.log("ini response");
       console.log(response.status);
       console.log(response.data.dataUsers);
+      console.log(response.data.dataUsers[0]);
+      
     } catch (error) {
       console.log(error);
     }
