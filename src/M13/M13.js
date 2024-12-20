@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export const M13 = () => {
-    const [nama, setNama] = useState("");
+    const [nama, setNama] = useState("TI-A");
 
   const ambilDataServer = async () => {
     try {
@@ -21,6 +21,8 @@ export const M13 = () => {
       console.log(response.data.dataUsers[0]);
       console.log(response.data.dataUsers[0].name);
       console.log(response.data.dataUsers[1].email);
+
+      setNama(response.data.dataUsers[0].name)
       
     } catch (error) {
       console.log(error);
