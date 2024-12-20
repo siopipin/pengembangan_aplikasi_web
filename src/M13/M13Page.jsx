@@ -10,7 +10,7 @@ function M13Page() {
   const fetchUsers = async () => {
     try {
       const response = await axios.get("http://localhost:3001/web/users");
-      setUsers(response.data.results);
+      setUsers(response.data.dataUsers);
       setLoading(false);
     } catch (error) {
       setLoading(false);
