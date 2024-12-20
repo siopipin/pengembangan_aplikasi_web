@@ -8,15 +8,25 @@ export const M13 = () => {
   const ambilDataServer = async () => {
     try {
       const response = await axios.get(
-        "https://8c04-103-165-239-161.ngrok-free.app/web/users"
+        "https://3f7f-103-165-239-161.ngrok-free.app/web/users",
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "69420",
+          },
+        }
       );
-      console.log(response.data);
+
+      console.log("ini response");
+      console.log(response.status);
+      console.log(response.data.dataUsers);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
+    console.log("hallo ini data");
+
     ambilDataServer();
   }, []);
 
