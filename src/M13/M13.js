@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const M13 = () => {
     const [nama, setNama] = useState("");
-    
+
   const ambilDataServer = async () => {
     try {
       const response = await axios.get(
@@ -35,7 +35,7 @@ export const M13 = () => {
 
   return (
     <div>
-      <h1>Hallo</h1>
+      <h1>{nama}</h1>
     </div>
   );
 };
