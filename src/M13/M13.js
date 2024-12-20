@@ -1,7 +1,9 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const M13 = () => {
+    const [nama, setNama] = useState("");
+    
   const ambilDataServer = async () => {
     try {
       const response = await axios.get(
@@ -20,7 +22,6 @@ export const M13 = () => {
       console.log(response.data.dataUsers[0].name);
       console.log(response.data.dataUsers[1].email);
       
-    
     } catch (error) {
       console.log(error);
     }
