@@ -7,6 +7,7 @@ export const M13 = () => {
 
   const ambilDataServer = async () => {
     try {
+      //ganti url ini dengan url localhost server masing-masing, contoh http://localhost:3001/web/users
       const response = await axios.get(
         "https://3f7f-103-165-239-161.ngrok-free.app/web/users",
         {
@@ -15,6 +16,21 @@ export const M13 = () => {
           },
         }
       );
+
+      //ganti url ini dengan url localhost server masing-masing, contoh http://localhost:3001/web/users
+      const dataDetail = await axios.get(
+        "https://3f7f-103-165-239-161.ngrok-free.app/mobile/users/7",  
+        {
+          headers: {
+            "ngrok-skip-browser-warning": "69420",
+          },
+        }
+      );
+
+      console.log('detail user');
+      console.log(dataDetail.data.data[0].name);
+
+
 
       console.log("ini response");
       console.log(response.status);
