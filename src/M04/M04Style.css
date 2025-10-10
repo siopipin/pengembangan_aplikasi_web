@@ -57,6 +57,29 @@ body {
   box-sizing: content-box;
 }
 
+.filter-options {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 20px;
+  padding: 12px;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+}
+
+.filter-options input[type="radio"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
 .title {
   font-size: 20px;
   padding-top: 24px;

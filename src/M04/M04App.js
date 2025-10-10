@@ -10,6 +10,7 @@ const M04App = () => {
   const [contacts, setContacts] = useState([]);
   const [keyword, setKeyword] = useState("");
   const [isMounted, setIsMounted] = useState(false);
+  const [filterType, setFilterType] = useState("nama");
 
   //memanggil useEffect hook agar di jalankan sekali untuk mendapatkan data contact
   useEffect(() => {
@@ -23,17 +24,22 @@ const M04App = () => {
     }
 
     /**melakukan filter terhadap data contact, dimana fungsi ini akan dijalankan
-     * setiap kali nilai state keyword berganti
+     * setiap kali nilai state keyword atau filterType berganti
      * di berikan jeda 1000 ms atau 1 detik
      */
     const filterContacts = setTimeout(() => {
       /**memasukkan nilai dari contact yang sudah di filter menggunakan methode filter
-       * dimana method filter hanya akan mengembalikan contact yang mengandung keyword
+       * dimana method filter akan mengembalikan contact berdasarkan tipe filter yang dipilih
        */
       setContacts([
-        ...dataContacts.filter((contact) =>
-          contact.nama.toLowerCase().includes(keyword.toLowerCase())
-        ),
+        ...dataContacts.filter((contact) => {
+          // filter berdasarkan nama atau nomor hp sesuai pilihan radio button
+          if (filterType === "nama") {
+            return contact.nama.toLowerCase().includes(keyword.toLowerCase());
+          } else {
+            return contact.nomor_hp.includes(keyword);
+          }
+        }),
       ]);
     }, 1000);
     /**ketika inputan di ketik kurang dari 1 detik maka clean up akan dijalankan
@@ -43,11 +49,17 @@ const M04App = () => {
     return () => {
       clearTimeout(filterContacts);
     };
-  }, [keyword]);
+    
+  }, [keyword, filterType]);
 
   //fungsi untuk mengubah nilai keyword menjadi apa yang di masukkan
   const searchHandler = (e) => {
     setKeyword(e.target.value);
+  };
+
+  //fungsi untuk mengubah tipe filter yang dipilih (nama atau nomor hp)
+  const filterTypeHandler = (e) => {
+    setFilterType(e.target.value);
   };
 
   //render component
@@ -57,6 +69,27 @@ const M04App = () => {
         <h1>XYZ Ponsel.</h1>
         {/**input akan memberikan nilai pada state keyword */}
         <input type="text" placeholder="cari..." onChange={searchHandler} />
+      </div>
+      {/**radio buttons untuk memilih tipe filter */}
+      <div className="filter-options">
+        <label>
+          <input
+            type="radio"
+            value="nama"
+            checked={filterType === "nama"}
+            onChange={filterTypeHandler}
+          />
+          Filter by Nama
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="nomor_hp"
+            checked={filterType === "nomor_hp"}
+            onChange={filterTypeHandler}
+          />
+          Filter by Nomor HP
+        </label>
       </div>
       <h2 className="title">Contact List</h2>
       <div className="contact-list">

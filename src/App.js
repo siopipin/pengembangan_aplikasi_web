@@ -1,6 +1,6 @@
-import M04aApp from "./M04a/M04aApp";
+import M04App from "./M04/M04App";
 function App() {
-  return <M04aApp />;
+  return <M04App />;
 }
 
 export default App;
