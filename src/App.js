@@ -1,7 +1,10 @@
-import M06App from "./M06/M06App";
+
+import M06Route from "./M06Soal/M06Route";
 
 function App() {
-  return <M06App />;
+  return (
+    <M06Route />
+  );
 }
 
 export default App;
